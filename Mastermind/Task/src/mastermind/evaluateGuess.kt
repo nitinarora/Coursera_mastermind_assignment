@@ -21,7 +21,7 @@ fun evaluateGuess(secret: String, guess: String): Evaluation {
 
     //first get all right positions
     for((key, value) in mutableGuessCache) {
-        if(value == secret.get(key)) {
+        if(value == mutableSecretCache.get(key)) {
             rightPosition++
             mutableSecretCache[key] = ' '
             mutableGuessCache[key] = ' '
